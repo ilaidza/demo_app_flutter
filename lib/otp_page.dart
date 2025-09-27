@@ -38,8 +38,21 @@ class OtpPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 18),
-            TextFormField(
-              decoration: InputDecoration(border: OutlineInputBorder()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(6, (index) {
+                return SizedBox(
+                  width: 40,
+                  child: TextField(
+                    keyboardType: TextInputType.number,
+                    maxLength: 1,
+                    decoration: InputDecoration(
+                      counterText: ' ',
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                );
+              }),
             ),
             SizedBox(height: 30),
             TextButton(
